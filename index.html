@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilium Day Care Centre</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        #body {
+            flex: 1;
+            /* overflow: auto; */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            position: relative;
+        }
+
+        .row {
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .ss-copyright {
+            text-align: left;
+            font-size: 0.8rem;
+        }
+
+        .ss-go-top {
+            display: flex;
+            align-items: center;
+            text-align: right;
+        }
+
+        .ss-go-top a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            text-decoration: none;
+        }
+        @media (max-width: 1289px) {
+            body {
+                margin: 0;
+            }
+            h1 {
+                font-size: 25px;
+            }
+            .row {
+                font-size: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="body">
+            <iframe src="welcome.html" name="start"></iframe>
+        </div>
+        <footer>
+            <div class="s-footer">
+                <div class="row">
+                    <div class="column ss-copyright">
+                        <span>© Copyright Seunghyeop Nam 2024</span>
+                        <span>Design by <a href="http://117.16.137.18/" style="color: #8AEA6C;" target="_blank">Seunghyop Nam</a></span>
+                    </div>
+
+                    <div class="ss-go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
