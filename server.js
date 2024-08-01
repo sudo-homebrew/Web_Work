@@ -63,6 +63,14 @@ app.get('/api/visitor-count/:page', (req, res) => {
     res.json({ count });
 });
 
+app.get('/reset', (req, res) => {
+    visitorCountMain = 0;
+    visitorCountDayCare = 0;
+    visitorCountVisit = 0;
+    visitorCountFinal = 0;
+    visitorCountFinal2 = 0;
+});
+
 // API to increment visitor count
 app.post('/api/visitor-count/:page', (req, res) => {
     const page = req.params.page;

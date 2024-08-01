@@ -1,13 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     updateVisitorCount();
+    document.getElementById('resetButton').addEventListener('click', function () {
+        resetVisitorCount();
+        updateVisitorCount();
+    });
 });
 
-function updateVisitorCount() {
-    let visitorCountMain = fetchVisitorCount('main');
-    let visitorCountDayCare = fetchVisitorCount('daycare');
-    let visitorCountVisit = fetchVisitorCount('visit');
-    let visitorCountFinal = fetchVisitorCount('final');
-    let visitorCountFinal2 = fetchVisitorCount('final2');
+async function updateVisitorCount() {
+    let visitorCountMain = await fetchVisitorCount('main');
+    let visitorCountDayCare = await fetchVisitorCount('daycare');
+    let visitorCountVisit = await fetchVisitorCount('visit');
+    let visitorCountFinal = await fetchVisitorCount('final');
+    let visitorCountFinal2 = await fetchVisitorCount('final2');
 
     console.log(visitorCountMain);
     console.log(visitorCountDayCare);
@@ -28,6 +32,24 @@ async function fetchVisitorCount(page) {
         return data.count;
     } catch (error) {
         console.error('Error fetching visitor count:', error);
+    }
+    return 0;
+}
+
+
+async function resetVisitorCount() {
+    try {
+        const response = await fetch('http://localhost:3000/reset', {
+            method: 'GET'
+        });
+
+        if (response.ok) {
+            console.log('Visitor count reset successfully');
+        } else {
+            console.error('Failed to reset visitor count');
+        }
+    } catch (error) {
+        console.error('Error:', error);
     }
     return 0;
 }

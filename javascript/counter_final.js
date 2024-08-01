@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    incrementVisitorCount('main');
+    incrementVisitorCount('final');
 });
 
 async function incrementVisitorCount(page) {

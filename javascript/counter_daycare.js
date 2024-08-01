@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    incrementVisitorCount('main');
+    incrementVisitorCount('daycare');
 });
 
 async function incrementVisitorCount(page) {
